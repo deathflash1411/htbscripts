@@ -1,6 +1,6 @@
 # Remote
 
-## Umbraco 7.12.4 Authenticated RCE (updatd payload)
+## Umbraco 7.12.4 Authenticated RCE (updated payload)
 
 Original exploit: https://www.exploit-db.com/exploits/46153
 
