@@ -16,6 +16,6 @@ Change IP Address to python web server's IP Address (line 25)
 
 Change username,password & host (line 33,34,35)
 
-Setup a listener with metasploit's `multi\handler`
+Setup a listener with metasploit's `multi/handler`
 
-Run the script: `python umbraco_auth_rce.py`
+Run the script: `python3 umbraco_auth_rce.py`
